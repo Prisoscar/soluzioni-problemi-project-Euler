@@ -1,6 +1,6 @@
 package eu.prisoscar.euler1.soluzioni;
 
-import eu.prisoscar.euler1.algoritmi_trasversali.NumeriPrimi;
+import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.Map.Entry;
 public class Probl_60_PrimePairSets {
 
     public static Entry<Long, List<Long>> sumPrimeSet() {
-        List<Long> analizedPrimes = NumeriPrimi.trovaPrimi(100000000_0);
+        List<Long> analizedPrimes = PrimeNumbers.findPrimes(100000000_0);
         List<Long> primeSet = new ArrayList<>();
         Map<Long, List<Long>> primeSets = new HashMap<>();
         boolean areConcatenationsPrimes;

@@ -1,7 +1,7 @@
 package eu.prisoscar.euler1.soluzioni;
 
-import eu.prisoscar.euler1.algoritmi_trasversali.NumeriPrimi;
-import java.util.ArrayList;
+import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
+
 import java.util.List;
 
 /*
@@ -18,7 +18,7 @@ public class Prbl_49_PrimePermutations {
 
     public static Long permutation() {
 
-        List<Long> listaPrimi = NumeriPrimi.trovaPrimi(1000, 10000);
+        List<Long> listaPrimi = PrimeNumbers.findPrimes(1000, 10000);
         String numeroEsaminato;
         String numeriPermutati;
 
