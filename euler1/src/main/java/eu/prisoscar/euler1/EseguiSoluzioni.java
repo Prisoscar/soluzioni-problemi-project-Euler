@@ -1,6 +1,9 @@
 package eu.prisoscar.euler1;
 
 import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
+import eu.prisoscar.euler1.soluzioni.Prbl_51_PrimeDigitsReplacements;
+
+import java.util.List;
 
 public class EseguiSoluzioni {
     public static void main(String[] args) {
@@ -14,8 +17,10 @@ public class EseguiSoluzioni {
 //        //problema 60 https://projecteuler.net/problem=60
 //        Map.Entry<Long, List<Long>> solution = Probl_60_PrimePairSets.sumPrimeSet();
 //        System.out.println("La soluzione del problema 60 è: " + solution.getKey() + " ottenuta dai segurnti primi: " + solution.getValue());
-        System.out.println(PrimeNumbers.isPrime(116868611));
-        System.out.println((double)136868611 / 12);
+
+        //Problem 51 https://projecteuler.net/problem=60
+        List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.primeDigitReplaced();
+        System.out.println("solution of problem 51 is:\n" + solution51 + "\nthe smallest prime is:\n" + solution51.get(0));
         
     }
     
