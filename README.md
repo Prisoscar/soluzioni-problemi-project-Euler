@@ -1,1 +1,1 @@
-# soluzioni-problemi-project-Euler
+# solution of some problems taken from https://projecteuler.net/archives
