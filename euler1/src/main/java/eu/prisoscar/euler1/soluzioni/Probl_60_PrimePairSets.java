@@ -17,56 +17,86 @@ import java.util.Map.Entry;
  */
 public class Probl_60_PrimePairSets {
 
-    public static Entry<Long, List<Long>> sumPrimeSet() {
-        List<Long> analizedPrimes = PrimeNumbers.findPrimes(100000000_0);
-        List<Long> primeSet = new ArrayList<>();
-        Map<Long, List<Long>> primeSets = new HashMap<>();
-        boolean areConcatenationsPrimes;
-        long setSum = Long.MAX_VALUE;
-        //String primeSetString;
-        Entry<Long, List<Long>> solution = null;
-        long skipped = 0L;
+    private static final int SET_SIZE = 5;
 
-        for (int i = 1; analizedPrimes.get(i) < 100L; i++) {
-            skipped = analizedPrimes.get(i + 1);
-            for (int j = i + 1; analizedPrimes.get(j) < 100L; j = analizedPrimes.indexOf(skipped)) {
-                primeSet.clear();
-                primeSet.add(analizedPrimes.get(i));
-                for (int k = j + 1; k < analizedPrimes.size() && primeSet.size() <= 5 && analizedPrimes.get(k) < 10000_0L; k++) {
-                    areConcatenationsPrimes = true;
-                    for (Long primo : primeSet) {
-                        if (!areConcatenationsPrime(primo, analizedPrimes.get(k), analizedPrimes)) {
+    public static Entry<Long, List<Long>> sumPrimeSet() {
+        List<Long> analyzedPrimes = PrimeNumbers.findPrimes(8_389);
+        Map<Long, List<Long>> primeSets = new HashMap<>();
+        Entry<Long, List<Long>> solution = null;
+
+        List<List<Long>> setsList = new ArrayList<>();
+        List<List<Long>> temporarySetsList;
+        List<Long> primeSet = new ArrayList<>();
+        boolean areConcatenationsPrimes = true;
+        long setSum = 0L;
+
+        if (analyzedPrimes.contains(2L)){
+            analyzedPrimes.remove(2L);
+        }
+        /*
+        In this algorithm I'll match every number with every else number in order to obtain all the couples that concatenations give prime numbers
+        then I'll match every obtained couples with every number greater than the greater prime of the set in order to obtain all the sets of three primes where all concatenations will give prime numbers
+        then I'll match every set of three with all numbers greater than the greater prime of the set  in order to obtain all sets of 4 elements that respect the concatenation rule
+        then I'll match every set of 4 with every number greater than the greater prime of the set in order to obtain all sets of 5 numbers that respect the concatenation rule
+        and at last I'll take the set with the lower sum
+         */
+        for (int i = 0; i < analyzedPrimes.size(); i++){
+            for (int j = i; j < analyzedPrimes.size(); j++){
+                if (areConcatenationsPrime(analyzedPrimes.get(i), analyzedPrimes.get(j))){
+                    primeSet.add(analyzedPrimes.get(i));
+                    primeSet.add(analyzedPrimes.get(j));
+                    setsList.add(primeSet);
+                    primeSet = new ArrayList<>();
+                }
+            }
+        }
+        //need to find set of 5
+        for(int i = 2; i < SET_SIZE; i++){
+            //last list of sets of i-dimension will be put in a temporary list and the new list of sets obtained will be 1-dimension greater
+            temporarySetsList = new ArrayList<>(setsList);
+            //clear the i-dimension list of sets in oder to be replaced with new  i+1-dimension list of sets
+            setsList = new ArrayList<>();
+            //step 1 - will analyze all i dimension sets
+            for(List<Long> analyzedSet : temporarySetsList) {
+                int greaterSetNumberIndex = analyzedPrimes.indexOf(analyzedSet.get(analyzedSet.size()-1));
+                //step 2 - and will match to them all prime numbers greater than the greater number on analyzed set
+                for (int j = ++greaterSetNumberIndex; j < analyzedPrimes.size(); j++) {
+                    //step 3.1 - if concatenations between prime number and all prime of the analyzed set are prime numbers
+                    for (long primeOfAnalyzedSet : analyzedSet){
+                        if (!areConcatenationsPrime(primeOfAnalyzedSet, analyzedPrimes.get(j))){
                             areConcatenationsPrimes = false;
                             break;
                         }
                     }
-                    if (areConcatenationsPrimes) {
-                        primeSet.add(analizedPrimes.get(k));
+                    //step 3.2 - I'll put the set with the new prime into the list of sets with i + 1 dimension
+                    if (areConcatenationsPrimes){
+                        primeSet = new ArrayList<>(analyzedSet);
+                        primeSet.add(analyzedPrimes.get(j));
+                        setsList.add(primeSet);
+                    } else{
+                        areConcatenationsPrimes = true;
                     }
-                }
-                System.out.println(primeSet);
-                if (primeSet.size() == 5) {
-                    setSum = primeSet.stream().map(primo -> primo).reduce(setSum, (accumulator, _item) -> accumulator + _item);     //dovrebbe sommare tutti gli elementi di primeSet
-                    primeSets.put(setSum, primeSet);
-                }
-                try {
-                    skipped = primeSet.get(1);
-                } catch (IndexOutOfBoundsException ex) {
-                    break;
+
                 }
             }
         }
-        for (Entry<Long, List<Long>> entryPrimeSets : primeSets.entrySet()) {
-            if (entryPrimeSets.getKey() < setSum) {
-                setSum = entryPrimeSets.getKey();
-                //primeSetString = entryPrimeSets.getValue().toString();
-                solution = entryPrimeSets;
+        for (List<Long> setOf5 : setsList){
+            setSum = setOf5.stream().reduce(setSum, Long::sum);     //should sum all elements of analyzed set
+            primeSets.put(setSum, setOf5);
+            setSum = 0L;
+        }
+        setSum = Long.MAX_VALUE;
+        for (Map.Entry<Long, List<Long>> entry : primeSets.entrySet()) {
+            if (entry.getKey() < setSum){
+                setSum = entry.getKey();
+                solution = entry;
             }
         }
         return solution;
     }
 
-    public static boolean areConcatenationsPrime(long num1, long num2, List<Long> primiAnalizati) {
-        return primiAnalizati.contains(Long.parseLong(String.valueOf(num1).concat(String.valueOf(num2)))) && primiAnalizati.contains(Long.parseLong(String.valueOf(num2).concat(String.valueOf(num1))));
+    //checks if concatenations of 2 numbers are prime numbers
+    private static boolean areConcatenationsPrime(long num1, long num2) {
+        return PrimeNumbers.isPrime(Long.parseLong(String.valueOf(num1).concat(String.valueOf(num2)))) && PrimeNumbers.isPrime(Long.parseLong(String.valueOf(num2).concat(String.valueOf(num1))));
     }
 }

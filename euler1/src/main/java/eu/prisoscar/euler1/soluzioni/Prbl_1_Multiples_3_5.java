@@ -24,8 +24,8 @@ public class Prbl_1_Multiples_3_5 {
                 listaMultipli.add(multiplo);
             }
         }
-        for (int i = 0; i < listaMultipli.size(); i++) {
-            risultato += listaMultipli.get(i);
+        for (Integer integer : listaMultipli) {
+            risultato += integer;
         }
         return risultato;
     }
