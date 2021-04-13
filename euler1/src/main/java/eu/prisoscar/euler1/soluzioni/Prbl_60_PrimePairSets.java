@@ -15,7 +15,7 @@ import java.util.Map.Entry;
 
     Find the lowest sum for a set of five primes for which any two primes concatenate to produce another prime.
  */
-public class Probl_60_PrimePairSets {
+public class Prbl_60_PrimePairSets {
 
     private static final int SET_SIZE = 5;
 
@@ -28,11 +28,10 @@ public class Probl_60_PrimePairSets {
         List<List<Long>> temporarySetsList;
         List<Long> primeSet = new ArrayList<>();
         boolean areConcatenationsPrimes = true;
-        long setSum = 0L;
+        long setSum;
 
-        if (analyzedPrimes.contains(2L)){
-            analyzedPrimes.remove(2L);
-        }
+        assert analyzedPrimes != null;
+        analyzedPrimes.remove(2L);
         /*
         In this algorithm I'll match every number with every else number in order to obtain all the couples that concatenations give prime numbers
         then I'll match every obtained couples with every number greater than the greater prime of the set in order to obtain all the sets of three primes where all concatenations will give prime numbers
@@ -81,9 +80,8 @@ public class Probl_60_PrimePairSets {
             }
         }
         for (List<Long> setOf5 : setsList){
-            setSum = setOf5.stream().reduce(setSum, Long::sum);     //should sum all elements of analyzed set
-            primeSets.put(setSum, setOf5);
-            setSum = 0L;
+            setSum = setOf5.stream().reduce(0L, Long::sum);     //sum all elements of analyzed set
+            primeSets.put(setSum, setOf5);      //teh sum value is the key of map & the set's numbers are the value
         }
         setSum = Long.MAX_VALUE;
         for (Map.Entry<Long, List<Long>> entry : primeSets.entrySet()) {

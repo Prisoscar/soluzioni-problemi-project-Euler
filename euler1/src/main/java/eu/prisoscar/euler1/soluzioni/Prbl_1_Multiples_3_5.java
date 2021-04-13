@@ -13,7 +13,7 @@ public class Prbl_1_Multiples_3_5 {
     public static int sommaMultipli() {
 
         List<Integer> listaMultipli = new ArrayList<>();
-        int risultato = 0;
+        int risultato;
         
         for (int i = 1; i <= Math.ceil(1000 / 3); i++) {
             listaMultipli.add(i * 3);
@@ -24,9 +24,7 @@ public class Prbl_1_Multiples_3_5 {
                 listaMultipli.add(multiplo);
             }
         }
-        for (Integer integer : listaMultipli) {
-            risultato += integer;
-        }
+        risultato = listaMultipli.stream().reduce(0, Integer::sum);
         return risultato;
     }
 }

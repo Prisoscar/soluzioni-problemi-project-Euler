@@ -41,8 +41,8 @@
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RunManager">
-    <configuration name="EseguiSoluzioni" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="eu.prisoscar.euler1.EseguiSoluzioni" />
+    <configuration name="ExecuteSolutions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="eu.prisoscar.euler1.ExecuteSolutions" />
       <module name="euler1" />
       <extension name="coverage">
         <pattern>
@@ -56,7 +56,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.EseguiSoluzioni" />
+        <item itemvalue="Application.ExecuteSolutions" />
       </list>
     </recent_temporary>
   </component>
