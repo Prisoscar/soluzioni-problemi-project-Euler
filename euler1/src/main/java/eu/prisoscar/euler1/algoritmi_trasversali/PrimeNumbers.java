@@ -84,7 +84,7 @@ public class PrimeNumbers {
     public static boolean isPrime(long num) {
 
         long maxDiv = num/2 +1;
-        boolean isPrimo = true;
+        boolean isPrime = true;
 
         //Supposing that 1 is not prime
         //up to 3 numbers are inserted manually on List
@@ -103,11 +103,11 @@ public class PrimeNumbers {
 
         for (long j = 3; j < maxDiv; j+=2) {
             if (num % j == 0) {
-                isPrimo = false;
+                isPrime = false;
                 break;
             }
             maxDiv = (num / j) + 1;
         }
-        return isPrimo;
+        return isPrime;
     }
 }
