@@ -10,7 +10,7 @@ import java.util.List;
  */
 public class Prbl_1_Multiples_3_5 {
 
-    public static int sommaMultipli() {
+    public static int getSolution() {
 
         List<Integer> listaMultipli = new ArrayList<>();
         int risultato;
