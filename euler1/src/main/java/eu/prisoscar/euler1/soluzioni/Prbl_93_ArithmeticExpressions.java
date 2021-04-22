@@ -4,6 +4,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /*
     By using each of the digits from the set, {1, 2, 3, 4}, exactly once, and making use of the four arithmetic
@@ -35,7 +36,7 @@ public class Prbl_93_ArithmeticExpressions {
         4-then find all possible brackets combinations
         5-then combine all together in all possible ways and evaluate the obtained expressions
      */
-    public static AbstractMap.SimpleEntry<Integer,Integer> findSet (){
+    public static AbstractMap.SimpleEntry<Integer,Integer> getSolution(){
         AbstractMap.SimpleEntry<Integer,Integer> solution = new AbstractMap.SimpleEntry<>(0,0);      //solution
         List<? extends Collection<? extends Number>> temporaryList;     //multi-step attribute
         List<Set<Integer>> listOfDigitsSets = new ArrayList<>();        //step 1
@@ -224,20 +225,21 @@ public class Prbl_93_ArithmeticExpressions {
                     }
                 }
             }
-            listOfNatuaralSolutions = new HashSet<>();
-            for (String analyzedEquation : listOfDigitsSetEquations){
+            listOfNatuaralSolutions = listOfDigitsSetEquations.parallelStream().map(equationString -> {
                 Object equationSolution = null;
                 try {
-                    equationSolution = engine.eval(analyzedEquation);
+                    equationSolution = engine.eval(equationString);
                 } catch (ScriptException e) {
                     e.printStackTrace();
                 }
                 if(equationSolution instanceof Integer){
-                    listOfNatuaralSolutions.add((int) equationSolution);
+                    return ((int) equationSolution);
                 }else if (equationSolution instanceof Double && (Double) equationSolution % 1 == 0){
-                    listOfNatuaralSolutions.add(((Double) equationSolution).intValue());
+                    return (((Double) equationSolution).intValue());
+                }else{
+                    return null;
                 }
-            }
+            }).collect(Collectors.toSet());
             int consecutiveNaturalResults = 0;
             for(int i = 1; i <= listOfNatuaralSolutions.size(); i++){
                 if (listOfNatuaralSolutions.contains(i)){

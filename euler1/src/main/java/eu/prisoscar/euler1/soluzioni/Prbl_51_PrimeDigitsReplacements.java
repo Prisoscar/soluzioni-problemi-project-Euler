@@ -21,7 +21,7 @@ public class Prbl_51_PrimeDigitsReplacements {
 
     private static List<Long> solution = new ArrayList<>();
 
-    public static List<Long> primeDigitReplaced(){
+    public static List<Long> getSolution(){
         List<Long> primesList = PrimeNumbers.findPrimes(10000000);
         String primeString;
         Collection<Integer> digitsIndexes = new ArrayList<>();

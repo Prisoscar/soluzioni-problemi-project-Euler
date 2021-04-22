@@ -19,7 +19,7 @@ public class Prbl_60_PrimePairSets {
 
     private static final int SET_SIZE = 5;
 
-    public static Entry<Long, List<Long>> sumPrimeSet() {
+    public static Entry<Long, List<Long>> getSolution() {
         List<Long> analyzedPrimes = PrimeNumbers.findPrimes(8_389);
         Map<Long, List<Long>> primeSets = new HashMap<>();
         Entry<Long, List<Long>> solution = null;

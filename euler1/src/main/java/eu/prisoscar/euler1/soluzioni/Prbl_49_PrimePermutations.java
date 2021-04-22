@@ -16,7 +16,7 @@ import java.util.List;
  */
 public class Prbl_49_PrimePermutations {
 
-    public static Long permutation() {
+    public static Long getSolution() {
 
         List<Long> listaPrimi = PrimeNumbers.findPrimes(1000, 10000);
         String numeroEsaminato;

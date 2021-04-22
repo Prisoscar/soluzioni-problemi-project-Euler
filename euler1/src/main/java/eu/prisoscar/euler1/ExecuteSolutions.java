@@ -19,22 +19,28 @@ public class ExecuteSolutions {
         int [] solution4 = Prbl_4_LargestPalindromeProduct.getSolution();
         System.out.println("solution of problem 4 is: " + solution4[0] + " obtained from: " + solution4[1] + " * " + solution4[2]);
 
+        //Problem 5 https://projecteuler.net/problem=5
+        System.out.println("solution of problem 5 is: " + Prbl_5_SmallestMultiple.getSolution());
+
+        //Problem 6 https://projecteuler.net/problem=6
+        System.out.println("solution of problem 6 is: " + Prbl_6_SumSquareDifference.getSolution());
+
         //Problem 49 https://projecteuler.net/problem=49
-        System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.permutation());
+        System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
 
         //Problem 51 https://projecteuler.net/problem=51
-        List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.primeDigitReplaced();
+        List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.getSolution();
         System.out.println("solution of problem 51 is:\n" + solution51 + "the smallest prime is:\n" + solution51.get(0));
 
 //        //Problem 60 https://projecteuler.net/problem=60
 //        //slow
-//        Map.Entry<Long, List<Long>> solution = Prbl_60_PrimePairSets.sumPrimeSet();
+//        Map.Entry<Long, List<Long>> solution = Prbl_60_PrimePairSets.getSolution();
 //        System.out.println("solution of problem 60 is: " + solution.getKey() + "obtained from the following prime numbers: " + solution.getValue());
 //
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow
 //        //solution of problem 93 is 1258, max natural number obtained is 51
-//        AbstractMap.SimpleEntry<Integer, Integer> solution93 = Prbl_93_ArithmeticExpressions.findSet();
+//        AbstractMap.SimpleEntry<Integer, Integer> solution93 = Prbl_93_ArithmeticExpressions.getSolution();
 //        System.out.println("solution of problem 93 is " + solution93.getKey() + ", max natural number obtained is " + solution93.getValue());
 
     }
