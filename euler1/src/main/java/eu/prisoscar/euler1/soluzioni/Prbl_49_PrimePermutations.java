@@ -1,7 +1,6 @@
 package eu.prisoscar.euler1.soluzioni;
 
 import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
-
 import java.util.List;
 
 /*
