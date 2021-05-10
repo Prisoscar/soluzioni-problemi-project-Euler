@@ -21,6 +21,7 @@ public class Prbl_17_NumberLetterCounts {
         return solution;
     }
 
+    //Recursive
     private static int lettersNumber (int number){
         if (number == 1000) return 11;      //one thousand
         if (number == 10) return 3;     //ten

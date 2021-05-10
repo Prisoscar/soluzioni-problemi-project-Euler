@@ -1,15 +1,25 @@
 package eu.prisoscar.euler1;
 
+import eu.prisoscar.euler1.algoritmi_trasversali.Divisors;
 import eu.prisoscar.euler1.soluzioni.*;
 import org.paukov.combinatorics3.Generator;
 
 import javax.script.ScriptException;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 public class ExecuteSolutions {
     public static void main(String[] args) throws ScriptException {
 
+        /*Generator.permutation(1,2,3,4,5,6,7,8,9,0,11,12,13,14,15)
+                .simple()
+                .stream()
+                .forEach(System.out::println);*/
         //Problem 1 https://projecteuler.net/problem=1
         System.out.println("solution of problem 1 is: " + Prbl_1_Multiples_3_5.getSolution());
 
@@ -71,6 +81,38 @@ public class ExecuteSolutions {
         //Problem 17 https://projecteuler.net/problem=17
         System.out.println("solution of problem 17 is: " + Prbl_17_NumberLetterCounts.getSolution());
 
+        //Problem 18 https://projecteuler.net/problem=18
+        System.out.println("solution of problem 18 is: " + Prbl_18_MaximumPathSumI.getSolution(Prbl_18_MaximumPathSumI.TRIANGLE));
+
+        //Problem 19 https://projecteuler.net/problem=19
+        System.out.println("solution of problem 19 is: " + Prbl_19_CountingSundays.getSolution());
+
+        //Problem 20 https://projecteuler.net/problem=20
+        System.out.println("solution of problem 20 is: " + Prbl_20_FactorialDigitSum.getSolution());
+
+        //Problem 21 https://projecteuler.net/problem=21
+        System.out.println("solution of problem 21 is: " + Prbl_21_AmicableNumbers.getSolution());
+
+        try {
+            //Problem 22 https://projecteuler.net/problem=22
+            System.out.println("solution of problem 22 is: " + Prbl_22_NamesScores.getSolution());
+        }catch (FileNotFoundException e){
+            System.out.println("FileNotFoundException thrown at problem 22");
+        }
+
+        //Problem 23 https://projecteuler.net/problem=23
+        System.out.println("solution of problem 23 is: " + Prbl_23_NonAbundantSums.getSolution());
+
+        //Problem 24 https://projecteuler.net/problem=24
+        System.out.println("solution of problem 24 is: " + Arrays.stream(Prbl_24_LexicographicPermutations.getSolution()).mapToLong(num -> (long) num).reduce(0L, (longSolution, lastNumber) -> Long.parseLong(String.valueOf(longSolution) + lastNumber)));
+
+        //Problem 25 https://projecteuler.net/problem=25
+        System.out.println("solution of problem 25 is: " + Prbl_25_1000DigitsFibonacciNumber.getSolution());
+
+        //not solved yet
+        //Problem 26 https://projecteuler.net/problem=26
+        //System.out.println("solution of problem 26 is: " + Prbl_26_ReciprocalCycles.getSolution());
+
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
 
@@ -82,6 +124,9 @@ public class ExecuteSolutions {
 //        //slow
 //        Map.Entry<Long, List<Long>> solution = Prbl_60_PrimePairSets.getSolution();
 //        System.out.println("solution of problem 60 is: " + solution.getKey() + "obtained from the following prime numbers: " + solution.getValue());
+
+        //Problem 67 https://projecteuler.net/problem=67
+        System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));
 //
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow
@@ -90,5 +135,14 @@ public class ExecuteSolutions {
 //        System.out.println("solution of problem 93 is " + solution93.getKey() + ", max natural number obtained is " + solution93.getValue());
 
     }
-    
+
+    /*private static Stream<Double> getStream (){
+        Collection<Double> streamedCollection = new ArrayList<>();
+        double counter = 0;
+        while(counter < Double.MAX_VALUE){
+            streamedCollection.add(counter);
+            counter++;
+        }
+        return StreamSupport.stream(Spliterators.spliterator());
+    }*/
 }

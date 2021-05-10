@@ -6,7 +6,7 @@ import java.util.List;
 //all algorithms for finding and handling prime numbers are within this class
 public class PrimeNumbers {
 
-    //prime numbers will be all put in a List, beware of RAM saturation
+    //prime numbers will be all put in a List, beware of OutOfMemory errors
     public static List<Long> findPrimes(long max) {
 
         List<Long> PrimesList = new ArrayList<>();
@@ -49,7 +49,7 @@ public class PrimeNumbers {
         return PrimesList;
     }
 
-    //prime numbers will be all put in a List, beware of RAM saturation
+    //prime numbers will be all put in a List, beware of OutOfMemory errors
     public static List<Long> findPrimes(long min, long max) {
 
         List<Long> fullPrimesList;
