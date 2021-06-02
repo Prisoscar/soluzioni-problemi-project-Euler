@@ -93,12 +93,12 @@ public class ExecuteSolutions {
         //Problem 21 https://projecteuler.net/problem=21
         System.out.println("solution of problem 21 is: " + Prbl_21_AmicableNumbers.getSolution());
 
-        try {
-            //Problem 22 https://projecteuler.net/problem=22
-            System.out.println("solution of problem 22 is: " + Prbl_22_NamesScores.getSolution());
-        }catch (FileNotFoundException e){
-            System.out.println("FileNotFoundException thrown at problem 22");
-        }
+//        try {
+//            //Problem 22 https://projecteuler.net/problem=22
+//            System.out.println("solution of problem 22 is: " + Prbl_22_NamesScores.getSolution());
+//        }catch (FileNotFoundException e){
+//            System.out.println("FileNotFoundException thrown at problem 22");
+//        }
 
         //Problem 23 https://projecteuler.net/problem=23
         System.out.println("solution of problem 23 is: " + Prbl_23_NonAbundantSums.getSolution());
@@ -109,9 +109,11 @@ public class ExecuteSolutions {
         //Problem 25 https://projecteuler.net/problem=25
         System.out.println("solution of problem 25 is: " + Prbl_25_1000DigitsFibonacciNumber.getSolution());
 
-        //not solved yet
         //Problem 26 https://projecteuler.net/problem=26
         //System.out.println("solution of problem 26 is: " + Prbl_26_ReciprocalCycles.getSolution());
+
+        //Problem 27 https://projecteuler.net/problem=27
+        System.out.println("solution of problem 27 is: " + Prbl_27_QuadraticPrimes.getSolution());
 
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
@@ -127,7 +129,7 @@ public class ExecuteSolutions {
 
         //Problem 67 https://projecteuler.net/problem=67
         System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));
-//
+
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow
 //        //solution of problem 93 is 1258, max natural number obtained is 51
@@ -135,14 +137,4 @@ public class ExecuteSolutions {
 //        System.out.println("solution of problem 93 is " + solution93.getKey() + ", max natural number obtained is " + solution93.getValue());
 
     }
-
-    /*private static Stream<Double> getStream (){
-        Collection<Double> streamedCollection = new ArrayList<>();
-        double counter = 0;
-        while(counter < Double.MAX_VALUE){
-            streamedCollection.add(counter);
-            counter++;
-        }
-        return StreamSupport.stream(Spliterators.spliterator());
-    }*/
 }

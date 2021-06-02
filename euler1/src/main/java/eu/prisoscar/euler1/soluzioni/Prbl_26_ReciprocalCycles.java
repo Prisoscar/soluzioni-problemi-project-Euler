@@ -1,10 +1,7 @@
 package eu.prisoscar.euler1.soluzioni;
 
 import java.math.BigDecimal;
-import java.math.BigInteger;
-import java.math.MathContext;
 import java.math.RoundingMode;
-import java.util.Arrays;
 
 /*
 A unit fraction contains 1 in the numerator. The decimal representation of the unit fractions with denominators 2 to 10 are given:
@@ -26,19 +23,27 @@ Find the value of d < 1000 for which 1/d contains the longest recurring cycle in
 public class Prbl_26_ReciprocalCycles {
 
     private static final int TARGET = 1000;
+    private static final int FRACTIONAL_PART_DIGITS = 10_000;
 
     public static int getSolution(){
         int solution = 7;
-        System.out.println((double) 1/7);
-        System.out.println(String.valueOf((double) 1/7).length());
-        String _1_7nth = new BigDecimal("1").divide(new BigDecimal("77"), 1000, RoundingMode.HALF_EVEN).toString();
-        System.out.println(_1_7nth);
-        _1_7nth = _1_7nth.replace("0.", "");
-        System.out.println(_1_7nth);
-        String [] split_1_7nt = _1_7nth.split(_1_7nth.substring(0, 1));
-        Arrays.stream(split_1_7nt).forEach(System.out::println);
-        System.out.println(split_1_7nt.length);
-
+        int longestRecurringPeriod = 6;
+        for(int i = 11; i < TARGET; i++){
+            String divisionResult = new BigDecimal("1").divide(new BigDecimal(String.valueOf(i)), FRACTIONAL_PART_DIGITS, RoundingMode.HALF_EVEN).toString();
+            String [] recurringCycleArray = new String [] {"", "", ""};
+            String recursion = "";
+            for(int j = 2; j < FRACTIONAL_PART_DIGITS / 2 ;j++) {
+                recursion = divisionResult.substring(divisionResult.length() - j, divisionResult.length() - 1);
+                recurringCycleArray = divisionResult.split(recursion);
+                if (recurringCycleArray.length <= 2) break;
+                if(recurringCycleArray [1].equals("") && recurringCycleArray [recurringCycleArray.length - 2].equals("")) break;
+            }
+            if (recursion.length() >= longestRecurringPeriod) {
+                solution = i;
+                longestRecurringPeriod = recursion.length();
+            }
+        }
+        //System.out.println("longest period is of: " + longestRecurringPeriod + " digits");
         return solution;
     }
 }
