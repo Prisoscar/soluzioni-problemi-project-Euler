@@ -115,6 +115,12 @@ public class ExecuteSolutions {
         //Problem 27 https://projecteuler.net/problem=27
         System.out.println("solution of problem 27 is: " + Prbl_27_QuadraticPrimes.getSolution());
 
+        //Problem 28 https://projecteuler.net/problem=28
+        System.out.println("solution of problem 28 is: " + Prbl_28_NumberSpiralDiagonals.getSolution());
+
+        //Problem 29 https://projecteuler.net/problem=29
+        System.out.println("solution of problem 29 is: " + Prbl_29_DistinctPowers.getSolution());
+
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
 
