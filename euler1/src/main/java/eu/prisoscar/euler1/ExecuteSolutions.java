@@ -22,7 +22,7 @@ public class ExecuteSolutions {
                 .forEach(System.out::println);*/
         //Problem 1 https://projecteuler.net/problem=1
         System.out.println("solution of problem 1 is: " + Prbl_1_Multiples_3_5.getSolution());
-
+/*
         //Problem 2 https://projecteuler.net/problem=2
         System.out.println("solution of problem 2 is: " + Prbl_2_EvenFibonacciNumbers.getSolution());
 
@@ -100,8 +100,8 @@ public class ExecuteSolutions {
 //            System.out.println("FileNotFoundException thrown at problem 22");
 //        }
 
-        //Problem 23 https://projecteuler.net/problem=23
-        System.out.println("solution of problem 23 is: " + Prbl_23_NonAbundantSums.getSolution());
+//        //Problem 23 https://projecteuler.net/problem=23
+//        System.out.println("solution of problem 23 is: " + Prbl_23_NonAbundantSums.getSolution());
 
         //Problem 24 https://projecteuler.net/problem=24
         System.out.println("solution of problem 24 is: " + Arrays.stream(Prbl_24_LexicographicPermutations.getSolution()).mapToLong(num -> (long) num).reduce(0L, (longSolution, lastNumber) -> Long.parseLong(String.valueOf(longSolution) + lastNumber)));
@@ -121,12 +121,21 @@ public class ExecuteSolutions {
         //Problem 29 https://projecteuler.net/problem=29
         System.out.println("solution of problem 29 is: " + Prbl_29_DistinctPowers.getSolution());
 
+        //Problem 30 https://projecteuler.net/problem=30
+        System.out.println("solution of problem 30 is: " + Prbl_30_DigitFifthPowers.getSolution());
+
+        //Problem 31 https://projecteuler.net/problem=31
+        System.out.println("solution of problem 31 is: " + Prbl_31_CoinSums.getSolution());
+*/
+        //Problem 32 https://projecteuler.net/problem=32
+        System.out.println("solution of problem 32 is: " + Prbl_32_PandigitalProducts.getSolution());
+
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
 
         //Problem 51 https://projecteuler.net/problem=51
         List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.getSolution();
-        System.out.println("solution of problem 51 is: " + solution51.get(0) + " the whole list is:" + solution51);
+        System.out.println("solution of problem 51 is: " + solution51.get(0) + " the whole list is: " + solution51);
 
 //        //Problem 60 https://projecteuler.net/problem=60
 //        //slow
