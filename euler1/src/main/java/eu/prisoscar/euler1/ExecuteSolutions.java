@@ -16,10 +16,6 @@ import java.util.stream.StreamSupport;
 public class ExecuteSolutions {
     public static void main(String[] args) throws ScriptException {
 
-        /*Generator.permutation(1,2,3,4,5,6,7,8,9,0,11,12,13,14,15)
-                .simple()
-                .stream()
-                .forEach(System.out::println);*/
         //Problem 1 https://projecteuler.net/problem=1
         System.out.println("solution of problem 1 is: " + Prbl_1_Multiples_3_5.getSolution());
 /*
@@ -126,9 +122,12 @@ public class ExecuteSolutions {
 
         //Problem 31 https://projecteuler.net/problem=31
         System.out.println("solution of problem 31 is: " + Prbl_31_CoinSums.getSolution());
-*/
+
         //Problem 32 https://projecteuler.net/problem=32
         System.out.println("solution of problem 32 is: " + Prbl_32_PandigitalProducts.getSolution());
+*/
+        //Problem 33 https://projecteuler.net/problem=33
+        System.out.println("solution of problem 33 is: " + Prbl_33_DigitCancellingFractions.getSolution());
 
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());

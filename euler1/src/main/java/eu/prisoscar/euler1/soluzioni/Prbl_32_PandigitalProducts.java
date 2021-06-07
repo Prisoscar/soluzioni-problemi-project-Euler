@@ -16,47 +16,40 @@ HINT: Some products can be obtained in more than one way so be sure to only incl
  */
 public class Prbl_32_PandigitalProducts {
 
-    private static final Collection<Integer> PANDIGITS = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
+    private static final Collection<Integer> PANDIGITAL_1_TO_9 = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9));
 
     public static long getSolution(){
         long solution = 0;
-        List<List<Integer>> pandigitsSubsets = Generator
-                .subset(PANDIGITS)
+        List<List<Integer>> pandigitalSubsets = Generator
+                .subset(PANDIGITAL_1_TO_9)
                 .simple()
                 .stream().collect(Collectors.toList());
-        //pandigitsSubsets.remove(new ArrayList<>(PANDIGITS));        //don't need 9 digits permutations
-        pandigitsSubsets.remove(new ArrayList<>(Collections.singletonList(1)));  //remove neutral element 1
-        List<Integer> allPandigitsLessThan9Digits = pandigitsSubsets.stream().map(pandigitSubset -> Generator
-                .permutation(pandigitSubset)
+        pandigitalSubsets.remove(new ArrayList<>(Collections.singletonList(1)));  //remove neutral element 1
+        List<Integer> allPandigitalLessThan9Digits = pandigitalSubsets.stream().map(pandigitalSubset -> Generator
+                .permutation(pandigitalSubset)
                 .simple()
-                .stream().mapToInt(permutedPandigitSubset -> permutedPandigitSubset.stream().reduce(0, (partialNumber, lastDigit) -> partialNumber = Integer.parseInt(String.valueOf(partialNumber) + lastDigit, 10))).boxed()
-        ).reduce(Stream.of((Integer) 2), (partialStream, lastStream) -> partialStream = Stream.concat(partialStream, lastStream)).sorted().collect(Collectors.toList());
+                .stream().mapToInt(permutedPandigitalSubset -> permutedPandigitalSubset.stream().reduce(0, (partialNumber, lastDigit) -> partialNumber = Integer.parseInt(String.valueOf(partialNumber) + lastDigit, 10))).boxed()
+        ).reduce(Stream.empty(), (partialStream, lastStream) -> partialStream = Stream.concat(partialStream, lastStream)).sorted().collect(Collectors.toList());
 
-        pandigitsSubsets.clear();
-       /* Set<Integer> all9DigitsPandigits = Generator
-                .permutation(PANDIGITS)
-                .simple()
-                .stream().mapToInt(permutation -> permutation.stream().reduce(0, (partialNumber, lastDigit) -> partialNumber = Integer.parseInt(String.valueOf(partialNumber) + lastDigit, 10))).boxed().collect(Collectors.toSet());*/
-        int counter = 1;
-        int counter2 = 1;
-        for (Integer analyzedPermutation: allPandigitsLessThan9Digits){
-            if( allPandigitsLessThan9Digits.size() / counter > allPandigitsLessThan9Digits.size() /counter2 * 10 ){
-                System.out.println(counter2 + "0%");
-                counter2++;
-            }
-            for (Integer analyzedDivisor: allPandigitsLessThan9Digits){
-                if(((analyzedPermutation / analyzedDivisor) + 1) < analyzedDivisor) {
-                    break;
-                }
-                if((Double.valueOf(analyzedPermutation) / analyzedDivisor) % 1 != 0) continue;
-                if((analyzedPermutation / analyzedDivisor) == analyzedDivisor) break;
-                if(allPandigitsLessThan9Digits.contains(analyzedPermutation / analyzedDivisor)){
-                    solution += analyzedPermutation;
-                    break;
+        String analyzedIdentity;
+        int lastSize = 0;
+        Set<Long> partialSolution = new LinkedHashSet<>();
+        for (int i = 0; i < allPandigitalLessThan9Digits.size(); i++){
+            for (int j = i;;j++){
+                analyzedIdentity = strigifyIdentity(allPandigitalLessThan9Digits.get(i), allPandigitalLessThan9Digits.get(j));
+                if (analyzedIdentity.length() < 9) continue;
+                if (analyzedIdentity.length() > 9) break;
+                if (allPandigitalLessThan9Digits.contains(Integer.parseInt(analyzedIdentity))) {
+                    partialSolution.add((long) allPandigitalLessThan9Digits.get(i) * allPandigitalLessThan9Digits.get(j));
                 }
             }
-            System.out.println(counter++);
+            if(allPandigitalLessThan9Digits.get(i) > 10000) break;
         }
+        solution = partialSolution.stream().reduce(0L, Long::sum);
         return solution;
+    }
+
+    private static String strigifyIdentity (int multiplicand, int multiplier){
+        return String.valueOf(multiplicand) + String.valueOf(multiplier) + String.valueOf(multiplicand * multiplier);
     }
 }
