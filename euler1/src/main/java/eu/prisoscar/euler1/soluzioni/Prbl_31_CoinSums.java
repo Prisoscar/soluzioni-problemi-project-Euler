@@ -29,65 +29,27 @@ public class Prbl_31_CoinSums {
     private static final int COINS_MAP_LENGTH = COINS.size();
 
     public static int getSolution(){
-
-     /*   int solution = 1;
-        Set<AbstractMap.SimpleEntry<Integer, List<Integer>>> coinsCombinations;
-        Set<AbstractMap.SimpleEntry<Integer, List<Integer>>> analyzedCoinsCombinations;
-
-        long startTimer = System.currentTimeMillis();
-        int counter = 0;
-        List<Integer> nextSolution;
-
-        coinsCombinations = COINS.entrySet().stream().map(analyzedEntry -> new AbstractMap.SimpleEntry<Integer, List<Integer>>(analyzedEntry.getKey(), Collections.singletonList(analyzedEntry.getValue()))).collect(Collectors.toSet());
-
-        while (coinsCombinations.size() > 0){
-            analyzedCoinsCombinations = new HashSet<>(coinsCombinations);
-            coinsCombinations = new HashSet<>();
-            int coinsSumValue;
-            for (AbstractMap.SimpleEntry<Integer, List<Integer>> analyzedEntry : analyzedCoinsCombinations){
-                for(int i = analyzedEntry.getKey(); i < COINS_MAP_LENGTH; i++){
-                    nextSolution = new ArrayList<>(analyzedEntry.getValue());
-                    nextSolution.add(COINS.get(i));
-                    coinsSumValue = analyzedEntry.getValue().stream().reduce(0, Integer::sum) + COINS.get(i);
-                    if(coinsSumValue < TARGET) coinsCombinations.add(new AbstractMap.SimpleEntry<>(i, nextSolution));
-                    if(coinsSumValue == TARGET) {
-                        //System.out.println(nextSolution);
-                        solution++;
-                        break;      //there is no reason to continue al other combinations will give a sum greater than our TARGET
-                    }
-                }
-            }
-            //System.out.println("iteration # " + counter++ + " array size = " + coinsCombinations.size());
-        }
-        System.out.println("Time required " + (System.currentTimeMillis()-startTimer));
-        //return solution;*/
-
         int solution = 1;   //the 2 pounds coin taken alone
-        List<AbstractMap.SimpleEntry<Integer, Integer>> coinsCombinations2;
-        List<AbstractMap.SimpleEntry<Integer, Integer>> analyzedCoinsCombinations2;
-        int counter2 = 0;
-        //startTimer = System.currentTimeMillis();
-        //initializing coinsCombinations
-        coinsCombinations2 = new ArrayList<>(COINS.entrySet().stream().map(analyzedEntry -> new AbstractMap.SimpleEntry<Integer, Integer>(analyzedEntry.getKey(), analyzedEntry.getValue())).collect(Collectors.toSet()));
+        List<AbstractMap.SimpleEntry<Integer, Integer>> coinsCombinations;
+        List<AbstractMap.SimpleEntry<Integer, Integer>> analyzedCoinsCombinations;
+        coinsCombinations = COINS.entrySet().stream().map(analyzedEntry -> new AbstractMap.SimpleEntry<Integer, Integer>(analyzedEntry.getKey(), analyzedEntry.getValue())).distinct().collect(Collectors.toList());
 
         //calculate all possible combinations
-        while (coinsCombinations2.size() > 0){
-            analyzedCoinsCombinations2 = new ArrayList<>(coinsCombinations2);
-            coinsCombinations2 = new ArrayList<>();
+        while (coinsCombinations.size() > 0){
+            analyzedCoinsCombinations = new ArrayList<>(coinsCombinations);
+            coinsCombinations = new ArrayList<>();
             int coinsSumValue;
-            for (AbstractMap.SimpleEntry<Integer, Integer> analyzedEntry : analyzedCoinsCombinations2){
+            for (AbstractMap.SimpleEntry<Integer, Integer> analyzedEntry : analyzedCoinsCombinations){
                 for(int i = analyzedEntry.getKey(); i < COINS_MAP_LENGTH; i++){
                     coinsSumValue = analyzedEntry.getValue() + COINS.get(i);
-                    if(coinsSumValue < TARGET) coinsCombinations2.add(new AbstractMap.SimpleEntry<>(i, coinsSumValue));
+                    if(coinsSumValue < TARGET) coinsCombinations.add(new AbstractMap.SimpleEntry<>(i, coinsSumValue));
                     if(coinsSumValue == TARGET) {
                         solution++;
                         break;      //there is no reason to continue al other combinations will give a sum greater than our TARGET
                     }
                 }
             }
-            //System.out.println("iteration # " + counter2++ + " array size = " + coinsCombinations2.size());
         }
-       // System.out.println("Time required " + (System.currentTimeMillis()-startTimer));
         return solution;
 
     }

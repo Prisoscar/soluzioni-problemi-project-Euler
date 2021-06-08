@@ -11,9 +11,10 @@ Note: As 1! = 1 and 2! = 2 are not sums they are not included.
   */
 public class Prbl_34_DigitFactorial {
 
-    private static final int MAX_POSIBLE_SUM = factorial(9) * 7;
+    private static final int MAX_POSSIBLE_SUM = factorial(9) * 7;
+
     public static int getSolution(){
-        return IntStream.rangeClosed(3, MAX_POSIBLE_SUM).parallel().map(Prbl_34_DigitFactorial::factorialSum).reduce(0, Integer::sum);
+        return IntStream.rangeClosed(3, MAX_POSSIBLE_SUM).parallel().map(Prbl_34_DigitFactorial::factorialSum).reduce(0, Integer::sum);
     }
 
     private static int factorial(int number){

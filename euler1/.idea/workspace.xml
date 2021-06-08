@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8ead3e3-a7fd-49ec-a387-53cb5e7a001f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_31_CoinSums.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_31_CoinSums.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_34_DigitFactorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_34_DigitFactorial.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
