@@ -125,9 +125,15 @@ public class ExecuteSolutions {
 
         //Problem 32 https://projecteuler.net/problem=32
         System.out.println("solution of problem 32 is: " + Prbl_32_PandigitalProducts.getSolution());
-*/
+
         //Problem 33 https://projecteuler.net/problem=33
         System.out.println("solution of problem 33 is: " + Prbl_33_DigitCancellingFractions.getSolution());
+
+        //Problem 34 https://projecteuler.net/problem=34
+        System.out.println("solution of problem 34 is: " + Prbl_34_DigitFactorial.getSolution());
+*/
+        //Problem 35 https://projecteuler.net/problem=35
+        System.out.println("solution of problem 35 is: " + Prbl_35_CircularPrimes.getSolution());
 
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
