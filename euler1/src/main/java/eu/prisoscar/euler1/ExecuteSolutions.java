@@ -131,9 +131,15 @@ public class ExecuteSolutions {
 
         //Problem 34 https://projecteuler.net/problem=34
         System.out.println("solution of problem 34 is: " + Prbl_34_DigitFactorial.getSolution());
-*/
+
         //Problem 35 https://projecteuler.net/problem=35
         System.out.println("solution of problem 35 is: " + Prbl_35_CircularPrimes.getSolution());
+
+        //Problem 36 https://projecteuler.net/problem=36
+        System.out.println("solution of problem 36 is: " + Prbl_36_DoubleBasePalindromes.getSolution());
+*/
+        //Problem 37 https://projecteuler.net/problem=37
+        System.out.println("solution of problem 37 is: " + Prbl_37_TruncatablePrimes.getSolution());
 
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
