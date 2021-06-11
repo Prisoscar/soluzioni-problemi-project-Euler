@@ -32,12 +32,12 @@ public class PrimeNumbers {
         //algorithm for finding prime numbers above 3
         for (long i = 3; i <= max; i += 2) {
             maxDiv = (i / 2) + 1;
-            for (int j = 1; primesList.get(j / 2) < maxDiv; j += 2) {
-                if (i % primesList.get(j) == 0) {
+            for (int j = 3; primesList.get(j / 2) < maxDiv; j += 2) {
+                if (i % primesList.get(j / 2) == 0) {
                     isPrimo = false;
                     break;
                 }
-                maxDiv = (i / primesList.get(j)) + 1;
+                maxDiv = (i / primesList.get(j / 2)) + 1;
             }
             if (isPrimo) {
                 primesList.add(i);
@@ -45,7 +45,6 @@ public class PrimeNumbers {
                 isPrimo = true;
             }
         }
-
         return primesList;
     }
 
@@ -102,24 +101,13 @@ public class PrimeNumbers {
                 isPrimo = true;
             }
         }
-        /*
-        fullPrimesList = findPrimes(max);
-
-        for (long primo : fullPrimesList) {
-            if (primo > max) {
-                break;
-            }
-            if (primo >= min) {
-                primesList.add(primo);
-            }
-        }*/
         return primesList;
     }
 
     //returns true if chosen number is prime
     public static boolean isPrime(long num) {
 
-        long maxDiv = num / 2 +1;
+        long maxDiv = num / 2 + 1;
         boolean isPrime = true;
 
         //Supposing that 1 is not prime

@@ -141,6 +141,9 @@ public class ExecuteSolutions {
         //Problem 37 https://projecteuler.net/problem=37
         System.out.println("solution of problem 37 is: " + Prbl_37_TruncatablePrimes.getSolution());
 
+        //Problem 38 https://projecteuler.net/problem=38
+        System.out.println("solution of problem 38 is: " + Prbl_38_PandigitalMultiples.getSolution());
+
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
 
