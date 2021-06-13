@@ -168,11 +168,14 @@ public class ExecuteSolutions {
         //Problem 47 https://projecteuler.net/problem=47
         System.out.println("solution of problem 47 is: " + Prbl_47_DistinctPrimeFactors.getSolution());
 
-        //Problem 47 https://projecteuler.net/problem=47
-        System.out.println("solution of problem 48 is: " + Prbl_47_DistinctPrimeFactors.getSolution());
-*/
         //Problem 48 https://projecteuler.net/problem=48
-        System.out.println("solution of problem 49 is: " + Prbl_48_SelfPowers.getSolution());
+        System.out.println("solution of problem 48 is: " + Prbl_48_SelfPowers.getSolution());
+
+        //Problem 49 https://projecteuler.net/problem=49
+        System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
+*/
+        //Problem 50 https://projecteuler.net/problem=50
+        System.out.println("solution of problem 50 is: " + Prbl_50_ConsecutivePrimeSum.getSolution());
 
         //Problem 51 https://projecteuler.net/problem=51
         List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.getSolution();
