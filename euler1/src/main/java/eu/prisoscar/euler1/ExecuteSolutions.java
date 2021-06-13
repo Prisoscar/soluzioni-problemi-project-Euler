@@ -1,17 +1,9 @@
 package eu.prisoscar.euler1;
 
-import eu.prisoscar.euler1.algoritmi_trasversali.Divisors;
 import eu.prisoscar.euler1.soluzioni.*;
-import org.paukov.combinatorics3.Generator;
 
 import javax.script.ScriptException;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
 
 public class ExecuteSolutions {
     public static void main(String[] args) throws ScriptException {
@@ -89,15 +81,15 @@ public class ExecuteSolutions {
         //Problem 21 https://projecteuler.net/problem=21
         System.out.println("solution of problem 21 is: " + Prbl_21_AmicableNumbers.getSolution());
 
-//        try {
-//            //Problem 22 https://projecteuler.net/problem=22
-//            System.out.println("solution of problem 22 is: " + Prbl_22_NamesScores.getSolution());
-//        }catch (FileNotFoundException e){
-//            System.out.println("FileNotFoundException thrown at problem 22");
-//        }
+        try {
+            //Problem 22 https://projecteuler.net/problem=22
+            System.out.println("solution of problem 22 is: " + Prbl_22_NamesScores.getSolution());
+        }catch (FileNotFoundException e){
+            System.out.println("FileNotFoundException thrown at problem 22");
+        }
 
-//        //Problem 23 https://projecteuler.net/problem=23
-//        System.out.println("solution of problem 23 is: " + Prbl_23_NonAbundantSums.getSolution());
+        //Problem 23 https://projecteuler.net/problem=23
+        System.out.println("solution of problem 23 is: " + Prbl_23_NonAbundantSums.getSolution());
 
         //Problem 24 https://projecteuler.net/problem=24
         System.out.println("solution of problem 24 is: " + Arrays.stream(Prbl_24_LexicographicPermutations.getSolution()).mapToLong(num -> (long) num).reduce(0L, (longSolution, lastNumber) -> Long.parseLong(String.valueOf(longSolution) + lastNumber)));
@@ -137,15 +129,50 @@ public class ExecuteSolutions {
 
         //Problem 36 https://projecteuler.net/problem=36
         System.out.println("solution of problem 36 is: " + Prbl_36_DoubleBasePalindromes.getSolution());
-*/
+
         //Problem 37 https://projecteuler.net/problem=37
         System.out.println("solution of problem 37 is: " + Prbl_37_TruncatablePrimes.getSolution());
 
         //Problem 38 https://projecteuler.net/problem=38
         System.out.println("solution of problem 38 is: " + Prbl_38_PandigitalMultiples.getSolution());
 
-        //Problem 49 https://projecteuler.net/problem=49
-        System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
+        //Problem 39 https://projecteuler.net/problem=39
+        System.out.println("solution of problem 39 is: " + Prbl_39_InnerRightTriangles.getSolution());
+
+        //Problem 40 https://projecteuler.net/problem=40
+        System.out.println("solution of problem 40 is: " + Prbl_40_Champernowne_sConstant.getSolution());
+
+        //Problem 41 https://projecteuler.net/problem=41
+        System.out.println("solution of problem 41 is: " + Prbl_41_PandigitalPrime.getSolution());
+
+        try {
+            //Problem 42 https://projecteuler.net/problem=42
+            System.out.println("solution of problem 42 is: " + Prbl_42_CodedTriangleNumbers.getSolution());
+        }catch (FileNotFoundException e){
+           System.out.println("FileNotFoundException thrown at problem 42");
+        }
+
+        //Problem 43 https://projecteuler.net/problem=43
+        System.out.println("solution of problem 43 is: " + Prbl_43_SubStringDivisibility.getSolution());
+
+//        //slow (1-2 minutes)
+//        //Problem 44 https://projecteuler.net/problem=44
+//        System.out.println("solution of problem 44 is: " + Prbl_44_PentagonNumbers.getSolution());
+
+        //Problem 45 https://projecteuler.net/problem=45
+        System.out.println("solution of problem 45 is: " + Prbl_45_TriangularPentagonalAndHexagonal.getSolution());
+
+        //Problem 46 https://projecteuler.net/problem=46
+        System.out.println("solution of problem 46 is: " + Prbl_46_Goldback_sOtherConjecture.getSolution());
+
+        //Problem 47 https://projecteuler.net/problem=47
+        System.out.println("solution of problem 47 is: " + Prbl_47_DistinctPrimeFactors.getSolution());
+
+        //Problem 47 https://projecteuler.net/problem=47
+        System.out.println("solution of problem 48 is: " + Prbl_47_DistinctPrimeFactors.getSolution());
+*/
+        //Problem 48 https://projecteuler.net/problem=48
+        System.out.println("solution of problem 49 is: " + Prbl_48_SelfPowers.getSolution());
 
         //Problem 51 https://projecteuler.net/problem=51
         List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.getSolution();
@@ -160,7 +187,7 @@ public class ExecuteSolutions {
         System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));
 
 //        //Problem 93 https://projecteuler.net/problem=93
-//        //too damn slow
+//        //too damn slow (30-60 minutes)
 //        //solution of problem 93 is 1258, max natural number obtained is 51
 //        AbstractMap.SimpleEntry<Integer, Integer> solution93 = Prbl_93_ArithmeticExpressions.getSolution();
 //        System.out.println("solution of problem 93 is " + solution93.getKey() + ", max natural number obtained is " + solution93.getValue());

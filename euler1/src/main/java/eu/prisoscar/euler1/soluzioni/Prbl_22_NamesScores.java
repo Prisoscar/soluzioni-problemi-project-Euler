@@ -22,7 +22,7 @@ public class Prbl_22_NamesScores {
         List<String> namesList;
         String txtLine;
         long beforeA = 'A' - 1;
-        File namesTxtFile = new File(System.getProperty("user.dir") + "\\names.txt");
+        File namesTxtFile = new File(System.getProperty("user.dir") + "/names.txt");
         Scanner scanNamesTxt = new Scanner(namesTxtFile);
         txtLine = scanNamesTxt.nextLine();
         txtLine = txtLine.substring(1).substring(0, txtLine.length() - 2);
