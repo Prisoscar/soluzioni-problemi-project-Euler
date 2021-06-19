@@ -14,6 +14,8 @@ The longest sum of consecutive primes below one-thousand that adds to a prime, c
 
 Which prime, below one-million, can be written as the sum of the most consecutive primes?
  */
+
+//optimized after had consulting the prbl 50 thread first algorithm took several hours to give the solution
 public class Prbl_50_ConsecutivePrimeSum {
 
     private static final int TARGET = 1_000_000;

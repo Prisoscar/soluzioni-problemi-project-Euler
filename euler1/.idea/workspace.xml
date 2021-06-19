@@ -7,6 +7,15 @@
     <list default="true" id="c8ead3e3-a7fd-49ec-a387-53cb5e7a001f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/PatternsNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberPatterns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_11_LargestProductInAGrid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_11_LargestProductInAGrid.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_12_HighlyDivisibleTriangularNumber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_12_HighlyDivisibleTriangularNumber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_35_CircularPrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_35_CircularPrimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_37_TruncatablePrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_37_TruncatablePrimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_41_PandigitalPrime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_41_PandigitalPrime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_43_SubStringDivisibility.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_43_SubStringDivisibility.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_47_DistinctPrimeFactors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_47_DistinctPrimeFactors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_50_ConsecutivePrimeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_50_ConsecutivePrimeSum.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +112,7 @@
     <select />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/euler1$ExecuteSolutions.ic" NAME="ExecuteSolutions Coverage Results" MODIFIED="1620048874090" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/euler1$ExecuteSolutions.ic" NAME="ExecuteSolutions Coverage Results" MODIFIED="1623963416253" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>eu.prisoscar.euler1.*</FILTER>
     </SUITE>
   </component>

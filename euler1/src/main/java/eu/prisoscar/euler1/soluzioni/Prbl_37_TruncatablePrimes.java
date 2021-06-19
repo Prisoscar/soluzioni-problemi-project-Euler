@@ -3,9 +3,6 @@ package eu.prisoscar.euler1.soluzioni;
 import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
 
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
-import java.util.concurrent.atomic.AtomicLong;
 
 /*
 The number 3797 has an interesting property. Being prime itself, it is possible to continuously remove digits from left to right,

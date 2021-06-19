@@ -1,7 +1,6 @@
 package eu.prisoscar.euler1.soluzioni;
 
 import java.util.AbstractMap;
-import java.util.Arrays;
 
 /*
 In the 20×20 grid below, four numbers along a diagonal line have been marked in red.

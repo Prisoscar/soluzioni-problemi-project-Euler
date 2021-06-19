@@ -3,7 +3,7 @@ package eu.prisoscar.euler1;
 import eu.prisoscar.euler1.soluzioni.*;
 
 import javax.script.ScriptException;
-import java.util.*;
+import java.io.FileNotFoundException;
 
 public class ExecuteSolutions {
     public static void main(String[] args) throws ScriptException {
@@ -173,13 +173,45 @@ public class ExecuteSolutions {
 
         //Problem 49 https://projecteuler.net/problem=49
         System.out.println("solution of problem 49 is: " + Prbl_49_PrimePermutations.getSolution());
-*/
+
         //Problem 50 https://projecteuler.net/problem=50
         System.out.println("solution of problem 50 is: " + Prbl_50_ConsecutivePrimeSum.getSolution());
 
         //Problem 51 https://projecteuler.net/problem=51
         List<Long> solution51 = Prbl_51_PrimeDigitsReplacements.getSolution();
         System.out.println("solution of problem 51 is: " + solution51.get(0) + " the whole list is: " + solution51);
+
+        //Problem 52 https://projecteuler.net/problem=52
+        System.out.println("solution of problem 52 is: " + Prbl_52_PermutedMultiples.getSolution());
+
+        //Problem 53 https://projecteuler.net/problem=53
+        System.out.println("solution of problem 53 is: " + Prbl_53_CombinatoricSelections.getSolution());
+
+        //Problem 54 https://projecteuler.net/problem=54
+        try {
+            System.out.println("solution of problem 54 is: " + Prbl_54_PokerHands.getSolution());
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFoundException thrown at problem 54");
+        }
+
+        //Problem 55 https://projecteuler.net/problem=55
+        System.out.println("solution of problem 55 is: " + Prbl_55_LycherelNumbers.getSolution());
+
+        //Problem 56 https://projecteuler.net/problem=56
+        System.out.println("solution of problem 56 is: " + Prbl_56_PowerfulDigitSum.getSolution());
+
+        //Problem 57 https://projecteuler.net/problem=57
+        System.out.println("solution of problem 57 is: " + Prbl_57_SquareRootConvergents.getSolution());
+
+        //Problem 58 https://projecteuler.net/problem=58
+        System.out.println("solution of problem 58 is: " + Prbl_58_SpiralPrimes.getSolution());
+*/
+        //Problem 59 https://projecteuler.net/problem=59
+        try {
+            System.out.println("solution of problem 59 is: " + Prbl_59_XORDecryption.getSolution());
+        } catch (FileNotFoundException e) {
+            System.out.println("FileNotFoundException thrown at problem 54");
+        }
 
 //        //Problem 60 https://projecteuler.net/problem=60
 //        //slow

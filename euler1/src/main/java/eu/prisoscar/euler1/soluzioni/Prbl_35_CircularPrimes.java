@@ -1,12 +1,10 @@
 package eu.prisoscar.euler1.soluzioni;
 
 import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
-import org.paukov.combinatorics3.Generator;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.stream.Collectors;
 
 /*
 The number, 197, is called a circular prime because all rotations of the digits: 197, 971, and 719, are themselves prime.

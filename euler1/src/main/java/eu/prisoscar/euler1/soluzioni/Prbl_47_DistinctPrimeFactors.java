@@ -3,10 +3,7 @@ package eu.prisoscar.euler1.soluzioni;
 import eu.prisoscar.euler1.algoritmi_trasversali.Divisors;
 import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 

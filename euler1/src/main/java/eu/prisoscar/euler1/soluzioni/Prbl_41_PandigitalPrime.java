@@ -1,6 +1,5 @@
 package eu.prisoscar.euler1.soluzioni;
 
-import eu.prisoscar.euler1.algoritmi_trasversali.PatternsNumber;
 import eu.prisoscar.euler1.algoritmi_trasversali.PrimeNumbers;
 import org.paukov.combinatorics3.Generator;
 
