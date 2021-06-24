@@ -20,7 +20,7 @@ public class Prbl_44_PentagonNumbers {
 
     public static long getSolution(){
         long solution = Integer.MAX_VALUE;
-        List<Long> pentagonNumbers = NumberSequences.pentagonNumbersSequence(SUPPOSED_TARGET);
+        List<Long> pentagonNumbers = NumberSequences.pentagonalNumbersSequence(SUPPOSED_TARGET);
         for (int i =  0; i < pentagonNumbers.size(); i++){
             for (int j = i + 1; j < pentagonNumbers.size(); j++) {
                 if (pentagonNumbers.contains(pentagonNumbers.get(j) - pentagonNumbers.get(i))

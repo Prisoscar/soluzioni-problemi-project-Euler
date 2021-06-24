@@ -13,19 +13,43 @@ public class NumberSequences {
         return triangleSequence;
     }
 
-    public static List<Long> pentagonNumbersSequence(int target){
-        List<Long> pentagonSequence = new ArrayList<>();
+    public static List<Long> squareNumbersSequence (int target){
+        List<Long> squareSequence = new ArrayList<>();
         for (int i = 1; i <= target; i++){
-            pentagonSequence.add((long)i * (3L * i - 1) / 2);
+            squareSequence.add((long)Math.pow(i,2));
         }
-        return pentagonSequence;
+        return squareSequence;
     }
 
-    public static List<Long> hexagonNumbersSequence(int target){
-        List<Long> hexagonSequence = new ArrayList<>();
+    public static List<Long> pentagonalNumbersSequence(int target){
+        List<Long> pentagonalSequence = new ArrayList<>();
         for (int i = 1; i <= target; i++){
-            hexagonSequence.add((long)i * (2L * i - 1));
+            pentagonalSequence.add((long)i * (3L * i - 1) / 2);
         }
-        return hexagonSequence;
+        return pentagonalSequence;
+    }
+
+    public static List<Long> hexagonalNumbersSequence(int target){
+        List<Long> hexagonalSequence = new ArrayList<>();
+        for (int i = 1; i <= target; i++){
+            hexagonalSequence.add((long)i * (2L * i - 1));
+        }
+        return hexagonalSequence;
+    }
+
+    public static List<Long> heptagonalNumbersSequence(int target){
+        List<Long> heptagonalSequence = new ArrayList<>();
+        for (int i = 1; i <= target; i++){
+            heptagonalSequence.add((long)i * (5L * i - 3) / 2);
+        }
+        return heptagonalSequence;
+    }
+
+    public static List<Long> octagonalNumbersSequence(int target){
+        List<Long> octagonalSequence = new ArrayList<>();
+        for (int i = 1; i <= target; i++){
+            octagonalSequence.add((long)i * (3L * i - 2));
+        }
+        return octagonalSequence;
     }
 }

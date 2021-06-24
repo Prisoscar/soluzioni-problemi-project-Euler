@@ -21,8 +21,8 @@ public class Prbl_45_TriangularPentagonalAndHexagonal {
     public static long getSolution(){
         long     solution = 0;
         List<Long> triangleNumbers = NumberSequences.triangleNumbersSequence(SUPPOSED_TARGET);
-        List<Long> pentagonNumbers = NumberSequences.pentagonNumbersSequence(SUPPOSED_TARGET);
-        List<Long> hexagonNumbers = NumberSequences.hexagonNumbersSequence(SUPPOSED_TARGET);
+        List<Long> pentagonNumbers = NumberSequences.pentagonalNumbersSequence(SUPPOSED_TARGET);
+        List<Long> hexagonNumbers = NumberSequences.hexagonalNumbersSequence(SUPPOSED_TARGET);
         for (int i = 285; i < SUPPOSED_TARGET; i++){
             if (pentagonNumbers.contains(triangleNumbers.get(i)) && hexagonNumbers.contains(triangleNumbers.get(i))){
                 solution = triangleNumbers.get(i);

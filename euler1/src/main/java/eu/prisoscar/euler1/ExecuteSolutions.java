@@ -205,7 +205,7 @@ public class ExecuteSolutions {
 
         //Problem 58 https://projecteuler.net/problem=58
         System.out.println("solution of problem 58 is: " + Prbl_58_SpiralPrimes.getSolution());
-*/
+
         //Problem 59 https://projecteuler.net/problem=59
         try {
             System.out.println("solution of problem 59 is: " + Prbl_59_XORDecryption.getSolution());
@@ -217,6 +217,12 @@ public class ExecuteSolutions {
 //        //slow
 //        Map.Entry<Long, List<Long>> solution = Prbl_60_PrimePairSets.getSolution();
 //        System.out.println("solution of problem 60 is: " + solution.getKey() + "obtained from the following prime numbers: " + solution.getValue());
+*/
+        //Problem 61 https://projecteuler.net/problem=61
+        System.out.println("solution of problem 61 is: " + Prbl_61_CyclicalFigurateNumbers.getSolution());
+
+        //Problem 62 https://projecteuler.net/problem=62
+        System.out.println("solution of problem 62 is: " + Prbl_62_CubicPermutations.getSolution());
 
         //Problem 67 https://projecteuler.net/problem=67
         System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));
