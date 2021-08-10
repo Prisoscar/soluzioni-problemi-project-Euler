@@ -55,7 +55,7 @@ public class Prbl_18_MaximumPathSumI extends Prbl_67_MaximunPathSum_II{
 
         public static final List<List<Integer>> TRIANGLE = Arrays
                 .stream(TRIANGLE_STRING.split("\n"))
-                .map(rowString ->  Arrays.stream(rowString.split(" "))
+                .map(rowString -> Arrays.stream(rowString.split(" "))
                         .map(Integer::parseInt)
                         .collect(Collectors.toList())
                 ).collect(Collectors.toList());

@@ -217,12 +217,24 @@ public class ExecuteSolutions {
 //        //slow
 //        Map.Entry<Long, List<Long>> solution = Prbl_60_PrimePairSets.getSolution();
 //        System.out.println("solution of problem 60 is: " + solution.getKey() + "obtained from the following prime numbers: " + solution.getValue());
-*/
+
         //Problem 61 https://projecteuler.net/problem=61
         System.out.println("solution of problem 61 is: " + Prbl_61_CyclicalFigurateNumbers.getSolution());
 
         //Problem 62 https://projecteuler.net/problem=62
         System.out.println("solution of problem 62 is: " + Prbl_62_CubicPermutations.getSolution());
+
+        //Problem 63 https://projecteuler.net/problem=63
+        System.out.println("solution of problem 63 is: " + Prbl_63_PowerfulDigitCounts.getSolution());
+
+        //Problem 64 https://projecteuler.net/problem=64
+        System.out.println("solution of problem 64 is: " + Prbl_64_OddPeriodSquareRoots.getSolution());
+
+        //Problem 65 https://projecteuler.net/problem=65
+        System.out.println("solution of problem 65 is: " + Prbl_65_ConvergentsOfE.getSolution());
+*/
+        //Problem 66 https://projecteuler.net/problem=66
+        System.out.println("solution of problem 66 is: " + Prbl_66_DiophantineEquation.getSolution());
 
         //Problem 67 https://projecteuler.net/problem=67
         System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));

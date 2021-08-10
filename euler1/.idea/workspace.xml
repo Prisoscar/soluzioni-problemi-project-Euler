@@ -7,9 +7,9 @@
     <list default="true" id="c8ead3e3-a7fd-49ec-a387-53cb5e7a001f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberSequences.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberSequences.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_44_PentagonNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_44_PentagonNumbers.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_45_TriangularPentagonalAndHexagonal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_45_TriangularPentagonalAndHexagonal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberPatterns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberPatterns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_18_MaximumPathSumI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_18_MaximumPathSumI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_62_CubicPermutations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_62_CubicPermutations.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,13 +93,6 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <watches-manager>
-      <configuration name="Application">
-        <watch expression="analyzedPrimes" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
