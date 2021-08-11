@@ -26,7 +26,7 @@ public class Prbl_23_NonAbundantSums {
         Set<Long> sumsOfAbundantNumbers = new HashSet<>();
         Set<Long> abundantNumbersSet = new HashSet<>();
         for (long i = 2; i < UPPER_LIMIT; i++){
-            if (Divisors.getDivisorsList(i).stream().reduce(0L, Long::sum) - i > i) abundantNumbersSet.add(i);
+            if (Divisors.getPrimeFactorsList(i).stream().reduce(0L, Long::sum) - i > i) abundantNumbersSet.add(i);
         }
         for (Long analyzedAbundantNumber : abundantNumbersSet){
             for (Long otherAbundantNumber : abundantNumbersSet) {

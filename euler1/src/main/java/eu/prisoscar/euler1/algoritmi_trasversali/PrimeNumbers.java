@@ -6,7 +6,11 @@ import java.util.List;
 //all algorithms for finding and handling prime numbers are within this class
 public class PrimeNumbers {
 
-    //prime numbers will be all put in a List, beware of OutOfMemory errors
+    /**
+     * returns the list of all prime number up to chosen value
+     * @param max (long) the number up to which find prime values
+     * @return  List(Long)
+     */
     public static List<Long> findPrimes(long max) {
 
         List<Long> primesList = new ArrayList<>();
@@ -48,7 +52,12 @@ public class PrimeNumbers {
         return primesList;
     }
 
-    //prime numbers will be all put in a List, beware of OutOfMemory errors
+    /**
+     * returns the list of all prime number in the chosen range
+     * @param min (long) the lower bound of the range
+     * @param max (long) the higher bound of the range
+     * @return  List(Long)
+     */
     public static List<Long> findPrimes(long min, long max) {
 
         List<Long> primesList = new ArrayList<>();
@@ -104,7 +113,11 @@ public class PrimeNumbers {
         return primesList;
     }
 
-    //returns true if chosen number is prime
+    /**
+     * tells if the passed in number is a prime number
+     * @param num the long to check if is a prime number
+     * @return (boolean) if the number is prime
+     */
     public static boolean isPrime(long num) {
 
         long maxDiv = num / 2 + 1;
@@ -133,5 +146,36 @@ public class PrimeNumbers {
             maxDiv = (num / j) + 1;
         }
         return isPrime;
+    }
+
+    /**
+     * returns all relatively primes of the passed number, if the input is invalid returns an empty List
+     * @param num long number to check all relatively primes between 1 and num (num has to be >= 2)
+     * @return  The List(Long) of all relatively prime numbers
+     */
+    public static List<Long> relativelyPrimes (long num){
+        List<Long> numPrimeFactors = Divisors.getPrimeFactorsList(num);
+        numPrimeFactors.remove(0);
+        List<Long> relativelyPrimes = new ArrayList<>();
+        boolean areRelativelyPrimes = true;
+        //if invalid input is provided returns an empty List
+        if(num <= 1L) return relativelyPrimes;
+        relativelyPrimes.add(1L);
+        for (long i = 2L; i < num; i++){
+            List<Long> iPrimeFactors = Divisors.getPrimeFactorsList(i);
+            iPrimeFactors.remove(0);
+            for (Long primeFactor: iPrimeFactors){
+                if (numPrimeFactors.contains(primeFactor)) {
+                    areRelativelyPrimes = false;
+                    break;
+                }
+            }
+            if (areRelativelyPrimes){
+                relativelyPrimes.add(i);
+            } else {
+                areRelativelyPrimes = true;
+            }
+        }
+        return relativelyPrimes;
     }
 }

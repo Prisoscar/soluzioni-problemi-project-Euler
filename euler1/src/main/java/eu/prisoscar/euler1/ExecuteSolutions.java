@@ -232,12 +232,15 @@ public class ExecuteSolutions {
 
         //Problem 65 https://projecteuler.net/problem=65
         System.out.println("solution of problem 65 is: " + Prbl_65_ConvergentsOfE.getSolution());
-*/
+
         //Problem 66 https://projecteuler.net/problem=66
         System.out.println("solution of problem 66 is: " + Prbl_66_DiophantineEquation.getSolution());
 
         //Problem 67 https://projecteuler.net/problem=67
         System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));
+*/
+        //Problem 69 https://projecteuler.net/problem=69
+        System.out.println("solution of problem 69 is: " + Prbl_69_TotientMaximum.getSolution());
 
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow (30-60 minutes)

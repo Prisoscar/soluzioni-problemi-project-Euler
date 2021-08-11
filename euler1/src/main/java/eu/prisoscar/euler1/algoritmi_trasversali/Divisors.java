@@ -4,10 +4,20 @@ import java.util.*;
 
 public class Divisors {
 
-    public static List<Long> getDivisorsList(Long number){
-        if (number == 1) return Collections.singletonList(number);
+    /**
+     * returns the list of all prime factors of given number (including 1 and the number itself)
+     * @param number Long
+     * @return List (Long)
+     */
+    public static List<Long> getPrimeFactorsList(Long number){
+        List<Long> divisorsList = new LinkedList<>();
+        if (number == 1) {
+            divisorsList.add(1L);
+            return divisorsList;
+        }
         if (number < 1) return new ArrayList<>();
-        List<Long> divisorsList = new LinkedList<>(Arrays.asList(1L, number));
+        divisorsList.add(1L);
+        divisorsList.add(number);
         for (long i = 2L; i < number / i; i++){
             if (number % i == 0) divisorsList.addAll(Arrays.asList(i, number/i));
         }

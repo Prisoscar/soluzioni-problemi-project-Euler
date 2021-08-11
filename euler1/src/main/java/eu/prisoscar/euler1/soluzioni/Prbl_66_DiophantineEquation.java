@@ -2,7 +2,6 @@ package eu.prisoscar.euler1.soluzioni;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /*
