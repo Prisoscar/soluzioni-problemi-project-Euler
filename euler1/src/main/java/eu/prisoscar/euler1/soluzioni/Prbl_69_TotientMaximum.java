@@ -11,7 +11,7 @@ public class Prbl_69_TotientMaximum {
     public static long getSolution(){
         long solution = 6;
         float solutionOverSolutionsPhi = 3F;
-        for(long i = solution; i <= TARGET; i+=solution){
+        for(long i = solution; i <= TARGET; i += solution){
             List<Long> iRelativelyPrimesList = PrimeNumbers.relativelyPrimes(i);
             int iPhi = iRelativelyPrimesList.size();
             float iOverIPhi = (float)i / iPhi;

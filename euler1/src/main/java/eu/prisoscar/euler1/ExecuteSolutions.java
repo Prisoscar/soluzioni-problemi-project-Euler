@@ -239,6 +239,9 @@ public class ExecuteSolutions {
         //Problem 67 https://projecteuler.net/problem=67
         System.out.println("solution of problem 67 is: " + Prbl_67_MaximunPathSum_II.getSolution(Prbl_67_MaximunPathSum_II.TRIANGLE));
 */
+        //Problem 68 https://projecteuler.net/problem=68
+        System.out.println("solution of problem 68 is: " + Prbl_68_Magic_5_gonRing.getSolution());
+
         //Problem 69 https://projecteuler.net/problem=69
         System.out.println("solution of problem 69 is: " + Prbl_69_TotientMaximum.getSolution());
 
