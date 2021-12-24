@@ -34,9 +34,15 @@ public class NumberPatterns {
         return new BigInteger(reverseStringNumber(number.toString()));
     }
 
+    /**
+     * @param number1
+     * @param number2
+     * @return if the two numbers are one a permutation of other
+     */
     public static boolean arePermutations (Number number1, Number number2){
         String number1String = String.valueOf(number1);
         String number2String = String.valueOf(number2);
+        if (number1String. length() != number2String.length()) return false;
         for(char digit: number1String.toCharArray()){
             number2String = number2String.replaceFirst(String.valueOf(digit), "");
         }

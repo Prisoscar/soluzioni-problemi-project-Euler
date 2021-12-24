@@ -5,9 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8ead3e3-a7fd-49ec-a387-53cb5e7a001f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_69_TotientMaximum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_69_TotientMaximum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberPatterns.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/NumberPatterns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/PrimeNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/PrimeNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_26_ReciprocalCycles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_26_ReciprocalCycles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_68_Magic_5_gonRing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_68_Magic_5_gonRing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_71_OrderedFractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_71_OrderedFractions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +37,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1qcw1aShF7x2Sk1BQeTE0hKunfA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -90,18 +99,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/algoritmi_trasversali/PrimeNumbers.java</url>
-          <line>162</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

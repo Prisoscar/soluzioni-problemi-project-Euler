@@ -43,7 +43,6 @@ public class Prbl_26_ReciprocalCycles {
                 longestRecurringPeriod = recursion.length();
             }
         }
-        //System.out.println("longest period is of: " + longestRecurringPeriod + " digits");
         return solution;
     }
 }

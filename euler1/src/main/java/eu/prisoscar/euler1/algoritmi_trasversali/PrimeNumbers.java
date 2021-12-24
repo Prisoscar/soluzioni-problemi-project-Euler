@@ -1,10 +1,31 @@
 package eu.prisoscar.euler1.algoritmi_trasversali;
 
+import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
+import java.util.Spliterators;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 //all algorithms for finding and handling prime numbers are within this class
 public class PrimeNumbers {
+
+    /**
+     * @return the BigInteger stream of all prime number starting from 2
+     */
+    public static Stream<BigInteger> primesStream(){
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(new PrimesIterator(new BigInteger("1")), 0), false);
+    }
+
+    /**
+     * @param startingValue - value from which stream starts
+     * @return the BigInteger stream of all prime number starting from given number
+     * @throws UnsupportedOperationException if startingValue is negative
+     */
+    public static Stream<BigInteger> primesStream(BigInteger startingValue){
+        return StreamSupport.stream(Spliterators.spliteratorUnknownSize(new PrimesIterator(startingValue), 0), false);
+    }
 
     /**
      * returns the list of all prime number up to chosen value
@@ -149,8 +170,43 @@ public class PrimeNumbers {
     }
 
     /**
+     * tells if the passed in number is a prime number
+     * @param num the BigInteger to check if is a prime number
+     * @return (boolean) if the number is prime
+     */
+    public static boolean isPrime(BigInteger num) {
+
+        BigInteger maxDiv = num.divide(new BigInteger("2")).add(new BigInteger("1"));
+        boolean isPrime = true;
+
+        //Supposing that 1 is not prime
+        //up to 3 numbers are inserted manually on List
+        if (num.compareTo(new BigInteger("1")) <= 0) {     //input validation
+            return false;
+        } else if (num.compareTo(new BigInteger("2")) == 0) {
+            return true;
+        } else if (num.compareTo(new BigInteger("3")) == 0) {
+            return true;
+        }
+
+        //returns false if num is even
+        if (num.mod(new BigInteger("2")).compareTo(new BigInteger("0")) == 0){
+            return false;
+        }
+
+        for (BigInteger j = new BigInteger("3"); j.compareTo(maxDiv) < 1; j = j.add(new BigInteger("2"))) {
+            if (num.mod(j).compareTo(new BigInteger("0")) == 0) {
+                isPrime = false;
+                break;
+            }
+            maxDiv = num.divide(j).add(new BigInteger("1"));
+        }
+        return isPrime;
+    }
+
+    /**
      * returns all relatively primes of the passed number, if the input is invalid returns an empty List
-     * @param num long number to check all relatively primes between 1 and num (num has to be >= 2)
+     * @param num - long number to check all relatively primes between 1 and num (num has to be >= 2)
      * @return  The List(Long) of all relatively prime numbers
      */
     public static List<Long> relativelyPrimes (long num){
@@ -177,5 +233,56 @@ public class PrimeNumbers {
             }
         }
         return relativelyPrimes;
+    }
+}
+
+// --- external classes --- \\
+/*
+iterator of prime numbers
+ */
+class PrimesIterator implements Iterator<BigInteger> {
+
+    private BigInteger lastPrime;
+
+    public PrimesIterator(BigInteger startingValue){
+        if(startingValue.compareTo(new BigInteger("-1")) <= 0){
+            throw new UnsupportedOperationException("prime starting number cannot be negative");
+        }
+        if(startingValue.compareTo(new BigInteger("3")) == 0){
+            this.lastPrime = new BigInteger("-1");
+            return;
+        }
+        if(startingValue.compareTo(new BigInteger("2")) <= 0){
+            this.lastPrime = startingValue;
+            return;
+        }
+        if (startingValue.mod(new BigInteger("2")).compareTo(new BigInteger("0")) == 0){
+            this.lastPrime = startingValue.subtract(new BigInteger("1"));
+        } else {
+            this.lastPrime = startingValue.subtract(new BigInteger("2"));
+        }
+    }
+
+    @Override
+    public boolean hasNext() {
+        return true;
+    }
+
+    @Override
+    public BigInteger next() {
+        boolean foundPrime = false;
+        if (this.lastPrime.compareTo(new BigInteger("-1")) == 0){
+            this.lastPrime = new BigInteger("3");
+            return new BigInteger("3");
+        }
+        if (this.lastPrime.compareTo(new BigInteger("2")) <= 0){
+            this.lastPrime = new BigInteger("-1");
+            return new BigInteger("2");
+        }
+        while (!foundPrime) {
+            this.lastPrime = this.lastPrime.add(new BigInteger("2"));
+            if (PrimeNumbers.isPrime(this.lastPrime)) foundPrime = true;
+        }
+        return this.lastPrime;
     }
 }
