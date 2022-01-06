@@ -17,8 +17,8 @@ public class Prbl_21_AmicableNumbers {
     public static int getSolution() {
         int solution = 0;
         for(long i = 2; i < TARGET; i++){
-            long eligibleAmicable = Divisors.getPrimeFactorsList(i).stream().reduce(0L, Long::sum) - i;
-            if (eligibleAmicable > i && eligibleAmicable < TARGET && Divisors.getPrimeFactorsList(eligibleAmicable).stream().reduce(0L, Long::sum) - eligibleAmicable == i) solution += i + eligibleAmicable;
+            long eligibleAmicable = Divisors.getFactorsList(i).stream().reduce(0L, Long::sum) - i;
+            if (eligibleAmicable > i && eligibleAmicable < TARGET && Divisors.getFactorsList(eligibleAmicable).stream().reduce(0L, Long::sum) - eligibleAmicable == i) solution += i + eligibleAmicable;
         }
         return solution;
     }

@@ -20,7 +20,7 @@ public class Prbl_70_TotientPermutation {
             if (i % 1_000_000 == 0){
                 System.out.println(i / 1_000_000 * 10 + "%");
             }
-            phiN = ((Double)Divisors.getPrimeFactorsList(i).stream()
+            phiN = ((Double)Divisors.getFactorsList(i).stream()
                     .filter(PrimeNumbers::isPrime)
                     .mapToDouble(d -> ((double)d))
                     .reduce(i, (subtotal, actualValue) -> subtotal *= ( 1 - 1 / actualValue))

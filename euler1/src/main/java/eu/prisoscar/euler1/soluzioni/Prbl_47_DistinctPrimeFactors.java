@@ -29,7 +29,7 @@ public class Prbl_47_DistinctPrimeFactors {
         long solution = 0L;
         List<Long> _4DistinctPrimeFactorsEachNumbers = LongStream.rangeClosed(644, SUPPOSED_TARGET)
                 .map(longNumber -> {
-                    if (Divisors.getPrimeFactorsList(longNumber).stream().filter(PrimeNumbers::isPrime).count() >= 4)
+                    if (Divisors.getFactorsList(longNumber).stream().filter(PrimeNumbers::isPrime).count() >= 4)
                         return longNumber;
                     else return 0;
                 }).boxed().sorted().distinct().collect(Collectors.toList());

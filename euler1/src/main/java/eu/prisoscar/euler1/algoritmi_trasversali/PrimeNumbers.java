@@ -210,7 +210,7 @@ public class PrimeNumbers {
      * @return  The List(Long) of all relatively prime numbers
      */
     public static List<Long> relativelyPrimes (long num){
-        List<Long> numPrimeFactors = Divisors.getPrimeFactorsList(num);
+        List<Long> numPrimeFactors = Divisors.getFactorsList(num);
         numPrimeFactors.remove(0);
         List<Long> relativelyPrimes = new ArrayList<>();
         boolean areRelativelyPrimes = true;
@@ -218,7 +218,7 @@ public class PrimeNumbers {
         if(num <= 1L) return relativelyPrimes;
         relativelyPrimes.add(1L);
         for (long i = 2L; i < num; i++){
-            List<Long> iPrimeFactors = Divisors.getPrimeFactorsList(i);
+            List<Long> iPrimeFactors = Divisors.getFactorsList(i);
             iPrimeFactors.remove(0);
             for (Long primeFactor: iPrimeFactors){
                 if (numPrimeFactors.contains(primeFactor)) {
@@ -243,7 +243,7 @@ public class PrimeNumbers {
     public static boolean areCoprimes(long num1, long num2){
         long checkedOne = Math.min(num1, num2);
         long uncheckedOne = Math.max(num1, num2);
-        List<Long> divisors = Divisors.getPrimeFactorsList(checkedOne);
+        List<Long> divisors = Divisors.getFactorsList(checkedOne);
         divisors.remove(0);
         for (long divisor: divisors){
             if (uncheckedOne % divisor == 0) return false;

@@ -248,9 +248,15 @@ public class ExecuteSolutions {
         //Problem 70 https://projecteuler.net/problem=70
         //slow(~ 5-10 min)
         System.out.println("solution of problem 70 is: " + Prbl_70_TotientPermutation.getSolution());
-*/
+
         //Problem 71 https://projecteuler.net/problem=71
         System.out.println("solution of problem 71 is: " + Prbl_71_OrderedFractions.getSolution());
+
+        //Problem 72 https://projecteuler.net/problem=72
+        System.out.println("solution of problem 72 is: " + Prbl_72_CountingFractions.getSolution());
+*/
+        //Problem 73 https://projecteuler.net/problem=73
+        System.out.println("solution of problem 73 is: " + Prbl_73_CountingFractionsInARange.getSolution());
 
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow (30-60 minutes)
