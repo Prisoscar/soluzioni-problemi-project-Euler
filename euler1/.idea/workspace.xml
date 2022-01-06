@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8ead3e3-a7fd-49ec-a387-53cb5e7a001f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_dpaukov_combinatoricslib3_3_3_0.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euler1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/euler1.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/ExecuteSolutions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_70_TotientPermutation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_70_TotientPermutation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_71_OrderedFractions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/eu/prisoscar/euler1/soluzioni/Prbl_71_OrderedFractions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
