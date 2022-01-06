@@ -33,7 +33,7 @@ public class Prbl_70_TotientPermutation {
             }
         }
         double elapsedMinutes = (System.currentTimeMillis() - elapsedTime) / 60000D;
-        System.out.println("Problem 70 solved in " + elapsedMinutes + "minutes!");
+        System.out.println("Problem 70 solved in " + elapsedMinutes + " minutes!");
         return solution;
     }
 }
