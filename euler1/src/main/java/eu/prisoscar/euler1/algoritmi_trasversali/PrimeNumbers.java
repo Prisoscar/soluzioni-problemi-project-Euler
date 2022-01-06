@@ -234,6 +234,22 @@ public class PrimeNumbers {
         }
         return relativelyPrimes;
     }
+
+    /**
+     * @param num1 (long)
+     * @param num2 (long)
+     * @return if the two numbers are coprimes
+     */
+    public static boolean areCoprimes(long num1, long num2){
+        long checkedOne = Math.min(num1, num2);
+        long uncheckedOne = Math.max(num1, num2);
+        List<Long> divisors = Divisors.getPrimeFactorsList(checkedOne);
+        divisors.remove(0);
+        for (long divisor: divisors){
+            if (uncheckedOne % divisor == 0) return false;
+        }
+        return true;
+    }
 }
 
 // --- external classes --- \\

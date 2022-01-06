@@ -235,7 +235,6 @@ public class Prbl_54_PokerHands {
         return pairsCounter;
     }
 
-
     private static int higherHighestCardWinner(String[] player1Hand, String[] player2Hand) {
         return Integer.compare(cardValue(player1Hand [0]), cardValue(player2Hand [0]));
     }
