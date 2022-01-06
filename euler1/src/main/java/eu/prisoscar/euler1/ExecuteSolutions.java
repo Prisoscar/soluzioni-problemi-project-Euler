@@ -243,12 +243,12 @@ public class ExecuteSolutions {
         System.out.println("solution of problem 68 is: " + Prbl_68_Magic_5_gonRing.getSolution());
 
         //Problem 69 https://projecteuler.net/problem=69
-        System.out.println("solution of problem 69 is: " + Prbl_69_TotientMaximum.getSolution());
+        System.out.println("solution of problem 69 is: " + Prbl_69_TotientMaximum.getSolution());*/
 
         //Problem 70 https://projecteuler.net/problem=70
         //slow(~10 min)
         System.out.println("solution of problem 70 is: " + Prbl_70_TotientPermutation.getSolution());
-*/
+
         //Problem 71 https://projecteuler.net/problem=71
         System.out.println("solution of problem 71 is: " + Prbl_71_OrderedFractions.getSolution());
 

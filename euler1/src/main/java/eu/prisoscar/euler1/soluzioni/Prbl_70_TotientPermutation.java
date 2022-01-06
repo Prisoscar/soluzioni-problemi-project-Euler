@@ -14,7 +14,12 @@ public class Prbl_70_TotientPermutation {
         long solution = 1;
         double lastSmallerRatio = 100D;
         long phiN;
+        long elapsedTime = System.currentTimeMillis();
+        System.out.println("Problem 70:");
         for (long i = 2; i <= TARGET; i++){
+            if (i % 1_000_000 == 0){
+                System.out.println(i / 1_000_000 * 10 + "%");
+            }
             phiN = ((Double)Divisors.getPrimeFactorsList(i).stream()
                     .filter(PrimeNumbers::isPrime)
                     .mapToDouble(d -> ((double)d))
@@ -27,6 +32,8 @@ public class Prbl_70_TotientPermutation {
                 solution = i;
             }
         }
+        double elapsedMinutes = (System.currentTimeMillis() - elapsedTime) / 60000D;
+        System.out.println("Problem 70 solved in " + elapsedMinutes + "minutes!");
         return solution;
     }
 }
