@@ -9,11 +9,19 @@ public class Operations {
 //        return analyzedNumber * factorial(--analyzedNumber);
 //    }
 
+    /**
+     * @param analyzedNumber the number of which calculate the factorial
+     * @return factorial operation value as BigInteger
+     */
     public static BigInteger factorial(int analyzedNumber){
         if(analyzedNumber == 0) return new BigInteger("1");
         return new BigInteger(String.valueOf(analyzedNumber)).multiply(factorial(--analyzedNumber));
     }
 
+    /**
+     * @param number as a BigInteger
+     * @return the sum of the digits of which that number is composed
+     */
     public static long digitsSum(BigInteger number){
         long sum = 0;
         String numberString = number.toString();

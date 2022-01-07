@@ -254,9 +254,15 @@ public class ExecuteSolutions {
 
         //Problem 72 https://projecteuler.net/problem=72
         System.out.println("solution of problem 72 is: " + Prbl_72_CountingFractions.getSolution());
-*/
+
         //Problem 73 https://projecteuler.net/problem=73
         System.out.println("solution of problem 73 is: " + Prbl_73_CountingFractionsInARange.getSolution());
+
+        //Problem 74 https://projecteuler.net/problem=74
+        System.out.println("solution of problem 74 is: " + Prbl_74_DigitFactorialChains.getSolution());
+*/
+        //Problem 75 https://projecteuler.net/problem=75
+        System.out.println("solution of problem 75 is: " + Prbl_75_SingularIntegerRightTriangles.getSolution());
 
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow (30-60 minutes)
