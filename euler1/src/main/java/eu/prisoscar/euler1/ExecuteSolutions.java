@@ -3,10 +3,11 @@ package eu.prisoscar.euler1;
 import eu.prisoscar.euler1.soluzioni.*;
 
 import javax.script.ScriptException;
-import java.io.FileNotFoundException;
+import java.io.*;
 
 public class ExecuteSolutions {
-    public static void main(String[] args) throws ScriptException {
+
+    public static void main(String[] args) throws ScriptException{
 
         //Problem 1 https://projecteuler.net/problem=1
         System.out.println("solution of problem 1 is: " + Prbl_1_Multiples_3_5.getSolution());
