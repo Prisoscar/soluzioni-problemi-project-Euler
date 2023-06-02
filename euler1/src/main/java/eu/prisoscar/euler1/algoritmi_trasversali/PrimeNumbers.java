@@ -238,9 +238,9 @@ public class PrimeNumbers {
     /**
      * @param num1 (long)
      * @param num2 (long)
-     * @return if the two numbers are coprimes
+     * @return if the two numbers are relatively prime
      */
-    public static boolean areCoprimes(long num1, long num2){
+    public static boolean areRelativelyPrime(long num1, long num2){
         long checkedOne = Math.min(num1, num2);
         long uncheckedOne = Math.max(num1, num2);
         List<Long> divisors = Divisors.getFactorsList(checkedOne);

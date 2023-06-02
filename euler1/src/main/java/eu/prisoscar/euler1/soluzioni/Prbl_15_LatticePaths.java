@@ -1,9 +1,9 @@
 package eu.prisoscar.euler1.soluzioni;
 
-import org.apache.poi.ss.usermodel.Cell;
+/*import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Workbook;
-import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;*/
 
 import java.io.*;
 import java.util.*;
@@ -23,7 +23,6 @@ public class Prbl_15_LatticePaths {
 
     //Pascal triangle method
     public static long getSolution() {
-        int solution = 0;
         List<Long> pascalTriangleLastLine;
         List<Long> pascalTriangleActualLine = Arrays.asList(1L, 2L, 1L);
         for (int i = 2; i < GRID_SIZE * 2; i++){

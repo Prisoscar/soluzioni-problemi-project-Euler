@@ -16,7 +16,7 @@ public class Prbl_73_CountingFractionsInARange {
             for(long n = lastNum; n < d; n++){
                 fractionValue = (double) n / d;
                 if(fractionValue >= UPPER_LIMIT) break;
-                if(PrimeNumbers.areCoprimes(n, d)){
+                if(PrimeNumbers.areRelativelyPrime(n, d)){
                     if(fractionValue > LOWER_LIMIT){
                         fractionsCounter++;
                     }else{

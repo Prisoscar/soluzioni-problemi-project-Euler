@@ -19,7 +19,7 @@ public class Prbl_71_OrderedFractions {
                 fractionValue = (double)j / i;
                 if (fractionValue >= TARGET_FRACTION_VALUE) break;
                 if (fractionValue > lastLeftFractionValue) {
-                    if (PrimeNumbers.areCoprimes(i, j)) {
+                    if (PrimeNumbers.areRelativelyPrime(i, j)) {
                         targetNumerator = j;
                         lastLeftFractionValue = fractionValue;
                     }
