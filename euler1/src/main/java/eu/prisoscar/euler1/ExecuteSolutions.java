@@ -265,9 +265,12 @@ public class ExecuteSolutions {
 
         //Problem 75 https://projecteuler.net/problem=75
         System.out.println("solution of problem 75 is: " + Prbl_75_SingularIntegerRightTriangles.getSolution());
-*/
+
         //Problem 76 https://projecteuler.net/problem=76
-        System.out.println("solution of problem 76 is: " + PRBL_76_CountingSummations.getSolution());
+        System.out.println("solution of problem 76 is: " + Prbl_76_CountingSummations.getSolution());
+*/
+        //Problem 76 https://projecteuler.net/problem=79
+        System.out.println("solution of problem 79 is: " + new Prbl_79_PasscodeDerivation().getSolution());
 
 //        //Problem 93 https://projecteuler.net/problem=93
 //        //too damn slow (30-60 minutes)

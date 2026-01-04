@@ -4,7 +4,7 @@ import eu.prisoscar.euler1.algoritmi_trasversali.Divisors;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-public class PRBL_76_CountingSummations {
+public class Prbl_76_CountingSummations {
 
     private static final int TARGET = 5;
 

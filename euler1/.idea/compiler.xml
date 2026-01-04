@@ -9,8 +9,5 @@
         <module name="euler1" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="euler1" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>
